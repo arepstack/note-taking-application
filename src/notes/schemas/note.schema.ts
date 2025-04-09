@@ -11,6 +11,11 @@ export class Note extends Document {
 
   @Prop({ type: Types.ObjectId, ref: 'User', required: true })
   user: Types.ObjectId;
+  @Prop({ type: [String], default: [] })
+  tags: string[];
+
+  @Prop({ default: 'general' })
+  category: string;
 }
 
 export const NoteSchema = SchemaFactory.createForClass(Note);
