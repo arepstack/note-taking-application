@@ -13,6 +13,9 @@ export class User {
 
   @Prop()
   photo: string;
+
+  @Prop({ default: () => process.env.USER_ROLE })
+  role: string;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
