@@ -104,6 +104,7 @@ The application requires environment variables for configuration, including the 
 ## API Endpoints
 
 *   `GET /auth/google` - Initiates the Google OAuth (Run this on any browser to get a access token. The USER_ROLE specified in your `.env` file will be the role of the access token)
+*   `GET /api/docs` -  Swagger UI with JWT support and endpoint descriptions. (Run this on any browser to see the API documentation)
 *   `POST /api/notes` - Creates a new note.
 *   `GET /api/notes?page=1&limit=5` - Retrieve a list of notes for the authenticated user. (With pagination)
 *   `GET /api/notes/:noteId` - Retrieve a specific note by ID
@@ -152,7 +153,7 @@ curl --location --request PUT 'http://localhost:3000/api/notes/<noteId>' \
 }'
 ```
 
-### Delete a Note
+### Delete a Note (Note: When deleting a note, it requires the token must belong to a admin user)
 ```bash
 curl --location --request DELETE 'http://localhost:3000/api/notes/<noteId>' \
 --header 'Authorization: Bearer <your-access-token-here>'
