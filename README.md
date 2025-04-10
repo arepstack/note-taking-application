@@ -10,7 +10,9 @@ A RESTful API for a simple note-taking application featuring Google OAuth 2.0 fo
 - [Google OAuth 2.0 Setup](#google-oauth-20-setup)
 - [Configuration](#configuration)
 - [Running the Application](#running-the-application)
-- [API Endpoints](#api-endpoints) (Optional: Add details later)
+- [API Endpoints](#api-endpoints)
+- [Sample API Requests](#sample-api-requests)
+- [Running the Test cases](#running-the-test-cases)
 
 ## Getting Started
 
